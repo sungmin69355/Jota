@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <section id="main" class="mx-auto my-5 py-5 px-3">
+      <h1>키보드 추천 서비스 JOTA</h1><br>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <!-- <img src="./img/main.png" alt="mainImage" class="img-fluid"> -->
+      </div>
+      <form action="/keybord/result" method="POST">
+        <h1>현재 신분 : 
+            <input type="radio" name="identity" value="student"> <label>학생</label>
+            <input type="radio" name="identity" value="ordinary"> <label>일반인</label>
+        </h1>  
+        <h1>주로 쓰는 용도 : 
+            <input type="radio" name="use" value="coding"> <label>코딩</label>
+            <input type="radio" name="use" value="design"> <label>디자인</label>
+            <input type="radio" name="use" value="Office"> <label>사무(재택 및 온라인 강의용)</label>
+            <input type="radio" name="use" value="game"> <label>게임</label>
+        </h1> 
+        <h1>타격감 : 
+            <input type="radio" name="blow" value="almost"> <label>거의 없다</label>
+            <input type="radio" name="blow" value="little"> <label>조금 느끼는정도</label>
+            <input type="radio" name="blow" value="normal"> <label>보통</label>
+            <input type="radio" name="blow" value="high" > <label>타격감 최고</label>
+        </h1>
+        <h1>소리 : 
+            <input type="radio" name="sound" value="No_noise"> <label>무소음</label>
+            <input type="radio" name="sound" value="small"> <label>작게</label>
+            <input type="radio" name="sound" value="normal"> <label>보통</label>
+            <input type="radio" name="sound" value="big"> <label>크게</label>
+        </h1>
+        <h1>디자인 : 
+            <input type="radio" name="design" value="fancy"> <label>화려한 것</label>
+            <input type="radio" name="design" value="modern"> <label>모던한 것</label>
+            <input type="radio" name="design" value="retro"> <label>레트로</label>
+        </h1>
+        <h1>가격 : 
+            <input type="radio" name="price" value="five"> <label>~ 5만원</label>
+            <input type="radio" name="price" value="ten"> <label>~ 10만원</label>
+            <input type="radio" name="price" value="twenty"> <label>~ 20만원</label>
+            <input type="radio" name="price" value="None"> <label>상관 x</label>
+        </h1>
+        <input type="submit" class="btn btn-outline-danger mt-3" value="확인 하기">
+      </form>
+    </section>
+  </div>
+</body>
