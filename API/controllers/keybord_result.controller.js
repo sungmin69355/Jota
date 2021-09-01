@@ -8,7 +8,7 @@ const result = {
         return connection.query('SELECT * FROM keybord', (err, result) =>{
             res.render("result.ejs", {
                 data : result
-                })
+            });
         });
     }
 }
