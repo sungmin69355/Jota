@@ -1,7 +1,14 @@
+const mysql = require('../../config/database'),
+      connection = mysql.init();
+mysql.connect(connection);
+
 const result = {
     post_result : async (req, res, next) =>{
         console.log(req.body);
-        res.json(req.body);
+        return connection.query('SELECT * FROM keybord', (err, result) =>{
+            res.json(result);
+        })
+        
     }
 }
 module.exports = result;
