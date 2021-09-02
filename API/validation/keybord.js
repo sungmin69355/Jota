@@ -6,7 +6,7 @@ const keybord_validation ={
 
         const schema = Joi.object().keys({
             identity: Joi.string().min(1).max(20).required(),
-            use: Joi.string().min(1).max(20).required(),
+            purpose: Joi.string().min(1).max(20).required(),
             blow: Joi.string().min(1).max(20).required(),
             sound: Joi.string().min(1).max(20).required(),
             design: Joi.string().min(1).max(20).required(),

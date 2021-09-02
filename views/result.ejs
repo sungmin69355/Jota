@@ -18,24 +18,31 @@
     <section id="main" class="mx-auto my-5 py-5 px-3">
       <h1>키보드 추천 서비스 JOTA</h1>
       <div class="col-lg-6 col-md-20 col-sm-10 col-12 mx-auto">
-      <table border="2">
-        <tr>
-            <th>이름</th>
-            <th width="50">가격</th>
-            <th>사진</th>
-            <th width="50">링크</th>
-        </tr>
-        <% data.forEach((item, index)=>{ %>
-            <tr>
-                <td><%= item.keybord_name %></td>
-                <td><%= item.price %>원</td>
-                <td><img src="<%= item.img_url %>" alt="mainImage" class="img-fluid"></td>
-                <td><button type="button" class="btn btn-outline-danger mt-10" onclick="window.open('<%= item.keybord_link %>')">구매</button></td>
-            </tr>
-        <% }); %>
-      </table>
+        <% if (data.length == 0 ) { %> 
+            <!-- 결과값이 없을경우 -->
+            <img src="../img/main/rogo_error.jpeg" alt="mainImage" class="img-fluid">
+            <%} else { %>
+                <!-- 결과값이 있을경우 -->
+            <table border="2">
+                <tr>
+                    <th>이름</th>
+                    <th width="50">가격</th>
+                    <th>사진</th>
+                    <th width="50">링크</th>
+                </tr>
+                <% data.forEach((item, index)=>{ %>
+                    <tr>
+                        <td><%= item.keybord_name %></td>
+                        <td><%= item.price %>원</td>
+                        <td><img src="<%= item.img_url %>" alt="mainImage" class="img-fluid"></td>
+                        <td><button type="button" class="btn btn-outline-danger mt-10" onclick="window.open('<%= item.keybord_link %>')">구매</button></td>
+                    </tr>
+                <% }); %>
+            </table>
+            <% } %>
+
     </div>
-      <button type="button" class="btn btn-outline-danger mt-3" onclick="document.location.href='/'">공유하기</button>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="document.location.href='/'">돌아가기</button>
     </section>
   </div>
 </body>
