@@ -1,16 +1,14 @@
-const assert = require('assert');
-const { request } = require('http');
-const supertest = require('supertest');
+const request = require('supertest');
 const app = require('../../app');
 
 describe('GET /keybord', () =>{
     it('return 200 status code', (done) =>{
         request(app)
             .get('/keybord')
-            .expect(304)
+            .expect(200)
             .end((err, res) =>{
                 if(err){
-                    throw err;
+                    throw err;s
                 }
                 done();
             });
