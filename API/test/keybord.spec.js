@@ -8,7 +8,7 @@ describe('GET /keybord', () =>{
             .expect(200)
             .end((err, res) =>{
                 if(err){
-                    throw err;s
+                    throw err;
                 }
                 done();
             });
