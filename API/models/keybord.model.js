@@ -1,3 +1,4 @@
+const util = require('../../API/util/util');
 const mysql = require('../../config/database'),
       connection = mysql.init();
 mysql.connect(connection);
@@ -6,16 +7,13 @@ const keybord_model = {
     //키보드 정보를 가져옵니다.
     keybord_model : async (req, res) =>{
         let body = req;
-        let q = "SELECT * FROM keybord where purpose = \'" + body.purpose + "\' AND blow = \'"+ body.blow + "\' AND sound = \'"+ body.sound +"\'AND design =\'"+ body.design +"\';";
+        const price =  util.prices(req.price);
+        let q = "SELECT * FROM keybord where purpose = \'" + body.purpose + "\' AND blow = \'"+ body.blow + "\' AND sound = \'"+ body.sound +"\'AND design =\'"+ body.design +"\' AND " + price +";";
         return new Promise((resolve, reject)=>{
             try{
-                connection.query(q, function(err, result) {
+                connection.query(q, (err, keybord_results) => {
                     if (err) {
                         throw err;
-                    }
-                    keybord_results = [];
-                    for(var i=0; i<result.length; i++) {
-                        keybord_results.push(result[i]);                        
                     }
                     console.log("keybord_results :",keybord_results);
                     resolve(keybord_results);
@@ -26,4 +24,5 @@ const keybord_model = {
         })
     }
 }
+
 module.exports = keybord_model;
