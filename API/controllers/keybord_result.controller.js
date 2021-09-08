@@ -6,7 +6,10 @@ const result = {
         console.log(body);
         const keybordRecord = await KeybordModel.keybord_model(body);
         //DB에서 reject을 줬을경우 예외처리를 해줘야함.
-        
+        if(keybordRecord == undefined){
+            keybordRecord = [];
+        }
+
         console.log("keybordRecord : ", keybordRecord);
         return res.render("result.ejs", {
             data : keybordRecord

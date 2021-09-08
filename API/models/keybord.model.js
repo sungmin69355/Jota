@@ -9,20 +9,24 @@ const keybord_model = {
         let body = req;
         const price =  util.prices(req.price);
         let q = "SELECT * FROM keybord where purpose = \'" + body.purpose + "\' AND blow = \'"+ body.blow + "\' AND sound = \'"+ body.sound +"\'AND design =\'"+ body.design +"\' AND " + price +";";
-        return new Promise((resolve, reject)=>{
-            try{
-                connection.query(q, (err, keybord_results) => {
-                    if (err) {
-                        throw err;
-                    }
-                    console.log("keybord_results :",keybord_results);
-                    resolve(keybord_results);
-                });
-            } catch(err){
-                reject(err);
-            }
-        })
+        return keybord_result(q);
     }
 }
 
 module.exports = keybord_model;
+
+function keybord_result(q) {
+    return new Promise((resolve, reject) => {
+        try {
+            connection.query(q, (err, keybord_results) => {
+                if (err) {
+                    throw err;
+                }
+                console.log("keybord_results :", keybord_results);
+                resolve(keybord_results);
+            });
+        } catch (err) {
+            reject(err);
+        }
+    });
+}
