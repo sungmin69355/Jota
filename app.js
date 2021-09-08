@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var keybordRouter = require('./routes/keybord');
 
 var app = express();
 
@@ -20,8 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/keybord', indexRouter);
-app.use('/keybord/result', indexRouter);
+app.use('/keybord', keybordRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
