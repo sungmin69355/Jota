@@ -3,27 +3,27 @@ const mysql = require('../../config/database'),
       connection = mysql.init();
 mysql.connect(connection);
 
-const keybord_model = {
+const keyboard_model = {
     //키보드 정보를 가져옵니다.
-    keybord_model : async (req, res) =>{
+    keyboard_model : async (req, res) =>{
         let body = req;
         const price =  util.prices(req.price);
         let q = "SELECT * FROM keybord where purpose = \'" + body.purpose + "\' AND blow = \'"+ body.blow + "\' AND sound = \'"+ body.sound +"\'AND design =\'"+ body.design +"\' AND " + price +";";
-        return keybord_result(q);
+        return keyboard_result(q);
     }
 }
 
-module.exports = keybord_model;
+module.exports = keyboard_model;
 
-function keybord_result(q) {
+function keyboard_result(q) {
     return new Promise((resolve, reject) => {
         try {
-            connection.query(q, (err, keybord_results) => {
+            connection.query(q, (err, keyboard_results) => {
                 if (err) {
                     throw err;
                 }
-                console.log("keybord_results :", keybord_results);
-                resolve(keybord_results);
+                console.log("keyboard_results :", keyboard_results);
+                resolve(keyboard_results);
             });
         } catch (err) {
             reject(err);

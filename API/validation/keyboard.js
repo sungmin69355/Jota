@@ -1,7 +1,7 @@
 const Joi = require('joi');
 
-const keybord_validation ={
-    keybord_validation : async (req, res, next) =>{
+const keyboard_validation ={
+    keyboard_validation : async (req, res, next) =>{
         const body = req.body;
 
         const schema = Joi.object().keys({
@@ -23,4 +23,4 @@ const keybord_validation ={
     }
 };
 
-module.exports = keybord_validation;
+module.exports = keyboard_validation;

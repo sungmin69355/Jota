@@ -5,8 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var keybordRouter = require('./routes/keybord');
-
+var keyboardRouter = require('./routes/keyboard');
 var app = express();
 
 // view engine setup
@@ -21,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/keybord', keybordRouter);
+app.use('/keyboard', keyboardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
