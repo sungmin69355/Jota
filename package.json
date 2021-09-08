@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "test": "node_modules/.bin/mocha api/test/keybord.spec.js"
+    "test": "node_modules/.bin/mocha api/test/keyboard.spec.js"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
