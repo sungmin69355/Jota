@@ -21,37 +21,37 @@
       </div>
       <form action="/keyboard/result" method="POST">
         <h1>현재 신분 : 
-            <input type="radio" name="identity" value="student"> <label>학생</label>
-            <input type="radio" name="identity" value="ordinary"> <label>일반인</label>
+            <input type="radio" name="identity" value="student" required> <label>학생</label>
+            <input type="radio" name="identity" value="ordinary" required> <label>일반인</label>
         </h1>  
         <h1>주로 쓰는 용도 : 
-            <input type="radio" name="purpose" value="coding"> <label>코딩</label>
-            <input type="radio" name="purpose" value="design"> <label>디자인</label>
-            <input type="radio" name="purpose" value="office"> <label>사무(재택 및 온라인 강의용)</label>
-            <input type="radio" name="purpose" value="game"> <label>게임</label>
+            <input type="radio" name="purpose" value="coding" required> <label>코딩</label>
+            <input type="radio" name="purpose" value="design" required> <label>디자인</label>
+            <input type="radio" name="purpose" value="office" required> <label>사무(재택 및 온라인 강의용)</label>
+            <input type="radio" name="purpose" value="game" required> <label>게임</label>
         </h1> 
         <h1>타격감 : 
-            <input type="radio" name="blow" value="almost"> <label>거의 없다</label>
-            <input type="radio" name="blow" value="little"> <label>조금 느끼는정도</label>
-            <input type="radio" name="blow" value="normal"> <label>보통</label>
-            <input type="radio" name="blow" value="high" > <label>타격감 최고</label>
+            <input type="radio" name="blow" value="almost" required> <label>거의 없다</label>
+            <input type="radio" name="blow" value="little" required> <label>조금 느끼는정도</label>
+            <input type="radio" name="blow" value="normal" required> <label>보통</label>
+            <input type="radio" name="blow" value="high" required> <label>타격감 최고</label>
         </h1>
         <h1>소리 : 
-            <input type="radio" name="sound" value="No_noise"> <label>무소음</label>
-            <input type="radio" name="sound" value="small"> <label>작게</label>
-            <input type="radio" name="sound" value="normal"> <label>보통</label>
-            <input type="radio" name="sound" value="high"> <label>크게</label>
+            <input type="radio" name="sound" value="No_noise" required> <label>무소음</label>
+            <input type="radio" name="sound" value="small" required> <label>작게</label>
+            <input type="radio" name="sound" value="normal" required> <label>보통</label>
+            <input type="radio" name="sound" value="high" required> <label>크게</label>
         </h1>
         <h1>디자인 : 
-            <input type="radio" name="design" value="fancy"> <label>화려한 것</label>
-            <input type="radio" name="design" value="modern"> <label>모던한 것</label>
-            <input type="radio" name="design" value="retro"> <label>레트로</label>
+            <input type="radio" name="design" value="fancy" required> <label>화려한 것</label>
+            <input type="radio" name="design" value="modern" required> <label>모던한 것</label>
+            <input type="radio" name="design" value="retro" required> <label>레트로</label>
         </h1>
         <h1>가격 : 
-            <input type="radio" name="price" value="five"> <label>~ 5만원</label>
-            <input type="radio" name="price" value="ten"> <label>~ 10만원</label>
-            <input type="radio" name="price" value="twenty"> <label>~ 20만원</label>
-            <input type="radio" name="price" value="None"> <label>상관 x</label>
+            <input type="radio" name="price" value="five" required> <label>~ 5만원</label>
+            <input type="radio" name="price" value="ten" required> <label>~ 10만원</label>
+            <input type="radio" name="price" value="twenty" required> <label>~ 20만원</label>
+            <input type="radio" name="price" value="None" required> <label>상관 x</label>
         </h1>
         <input type="submit" class="btn btn-outline-danger mt-3" value="확인 하기">
       </form>
