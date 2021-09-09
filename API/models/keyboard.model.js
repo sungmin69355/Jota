@@ -1,4 +1,4 @@
-const util = require('../../API/util/util');
+const util = require('../util/util');
 const mysql = require('../../config/database'),
       connection = mysql.init();
 mysql.connect(connection);
