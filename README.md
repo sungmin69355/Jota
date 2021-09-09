@@ -1,6 +1,7 @@
 키보드 추천 플랫폼 JOTA입니다. (개발 중...)
 -------------
 * mac OS, node.js, express.js, mysql을 통해 개발하였습니다.
+* test code는 Mocha를 사용했습니다.
 * ORM을 사용하지 않은 이유는 ORM에 의존하지않고 native DB query를 활용해보고 싶었습니다. 추 후 완성된 후 리팩토링을 통해 ORM을 추가할 에정입니다.
 * 오픈 소스이니 자유롭게 활용하셔도 됩니다.
 
