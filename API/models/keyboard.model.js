@@ -28,5 +28,6 @@ function keyboard_result(q) {
         } catch (err) {
             reject(err);
         }
+        connection.end();
     });
 }
