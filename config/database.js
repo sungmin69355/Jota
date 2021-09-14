@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 const db_info = {
-    host: 'localhost',
-    user: 'root', 
-    password: 'aa693655', 
-    database: 'jota'
+    host: 'us-cdbr-east-04.cleardb.com',
+    user: 'b3342222cb8610', 
+    password: '89729865', 
+    database: 'heroku_0628ed843dc8462'
 }
 module.exports = {
     init: function () {
