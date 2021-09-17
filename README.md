@@ -1,5 +1,6 @@
 키보드 추천 플랫폼 JOTA입니다. (개발 중...)
 -------------
+https://jota-keyboard.herokuapp.com/ 한번 이용해보세요
 * mac OS, node.js, express.js, mysql을 통해 개발하였습니다.
 * test code는 Mocha를 사용했습니다.
 * validation은 joi를 사용했습니다.
