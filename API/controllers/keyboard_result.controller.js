@@ -11,7 +11,7 @@ const result = {
         }
 
         console.log("KeyboardModel : ", KeyboardModel);
-        return res.render("result.ejs", {
+        return res.status(200).render("result.ejs", {
             data : KeyboardModel
         });
     }
